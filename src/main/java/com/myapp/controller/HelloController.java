@@ -16,6 +16,7 @@ public class HelloController {
 		return "Greetings from Satish Singh! ";
 	}
 	
+	// method checkMovie
 	@RequestMapping(method = RequestMethod.GET, value = "movie/{language}/{name}/{rating}" , headers = "Accept=application/json")
 	@ApiOperation(httpMethod = "GET", value = "Check your movie")
 	public Movie checkMovie(@RequestParam(value = "language") String language , @RequestParam(value = "name") String name ,
